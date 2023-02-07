@@ -22,5 +22,5 @@ updates:
       - "poetry dependencies"
     # Add reviewers
     reviewers:
-      - "mrwybraniec",
+      - "mrwybraniec"
       - "michal-wybraniec"
