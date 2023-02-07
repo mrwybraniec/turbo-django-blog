@@ -1,0 +1,26 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+      # Check for poetry updates on Mondays
+      day: "monday"
+      # Check for poetry updates at 9am UTC+1
+      time: "09:00"
+      timezone: "Europe/Warsaw"
+    # Raise pull requests for version updates
+    # to poetry against the `develop` branch
+    target-branch: "develop"
+    # Labels on pull requests for version updates only
+    labels:
+      - "poetry dependencies"
+    # Add reviewers
+    reviewers:
+      - "mrwybraniec",
+      - "michal-wybraniec"
