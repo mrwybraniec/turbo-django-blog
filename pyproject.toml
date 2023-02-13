@@ -42,7 +42,8 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "turbo_django_blog.settings"
 # -- recommended but optional:
-# addopts = "-ra -q"
+addopts = "--reuse-db --migrations"
+django_debug_mode = true
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 
 [tool.isort]
