@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 @pytest.fixture(name="turbo_super_user")
-def super_user_fixture(*args, **kwargs) -> User:
+def super_user_fixture() -> User:
     """Fixture returning superuser for the application.
 
     Returns:
@@ -20,7 +20,7 @@ def super_user_fixture(*args, **kwargs) -> User:
 
 
 @pytest.fixture(name="turbo_user")
-def turbo_user_fixture(*args, **kwargs) -> User:
+def turbo_user_fixture() -> User:
     """Fixture returning user for the app.
 
     Returns:

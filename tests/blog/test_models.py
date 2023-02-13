@@ -1,13 +1,11 @@
 # Standard Library
 import datetime
 import pytest
-from django.contrib import auth
+
 from django.contrib.auth.models import User
 
 # Current App
 from blog.models import Post
-
-# TODO : Create a conftest.py containing authenticated user to use with testing post model.
 
 
 @pytest.mark.django_db(transaction=True)
