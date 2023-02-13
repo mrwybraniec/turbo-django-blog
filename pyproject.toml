@@ -25,6 +25,7 @@ pylint-pytest = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-asyncio = "*"
+pytest-django = "^4.5.2"
 pytest-tornasync = "*"
 mypy = "*"
 httpx = "*"
@@ -38,6 +39,12 @@ types-python-dateutil = "^2.8.19"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "turbo_django_blog.settings"
+# -- recommended but optional:
+addopts = "--reuse-db --migrations"
+django_debug_mode = true
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
 
 [tool.isort]
 profile = "black"
@@ -123,7 +130,7 @@ persistent = true
 
 # Minimum Python version to use for version dependent checks. Will default to the
 # version used to run pylint.
-py-version = "3.9"
+py-version = "3.10"
 
 # Discover python modules and packages in the file system subtree.
 # recursive =
